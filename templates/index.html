@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AgriRecommend</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🌾 AgriRecommend System</h1>
+    <form method="POST">
+
+        <input type="number" step="any" name="nitrogen" placeholder="Nitrogen (N)" required>
+        <input type="number" step="any" name="phosphorus" placeholder="Phosphorus (P)" required>
+        <input type="number" step="any" name="potassium" placeholder="Potassium (K)" required>
+        <input type="number" step="any" name="temperature" placeholder="Temperature (°C)" required>
+        <input type="number" step="any" name="humidity" placeholder="Humidity (%)" required>
+        <input type="number" step="any" name="ph" placeholder="pH Value" required>
+        <input type="number" step="any" name="rainfall" placeholder="Rainfall (mm)" required>
+
+        <button type="submit">Predict Crop</button>
+
+    </form>
+
+    <h2>{{ prediction }}</h2>
+</div>
+
+</body>
+</html>
